@@ -12,11 +12,15 @@ extra-source-files:
 executable reader-warp
     main-is: Main.hs
     default-language: Haskell2010
-    ghc-options: -threaded -Wall -with-rtsopts=-N
+    ghc-options: -threaded -Wall -with-rtsopts=-N -Wno-type-defaults 
     build-depends:
         base >=4.11 && <4.12,
         mtl -any,
         wai -any,
         warp -any,
         fast-logger -any,
-        containers -any
+        containers -any,
+        aeson -any,
+        http-types -any,
+        text -any,
+        bytestring -any
